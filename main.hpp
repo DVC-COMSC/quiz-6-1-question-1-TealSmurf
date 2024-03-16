@@ -33,7 +33,7 @@ int getNextPrime(int begin)
 int getPrevPrime(int end)
 {
     int i, j;
-    for(int j = end - 1; ; i--)
+    for(int i = end - 1; ; i--)
     {
         for(j = 2; j <= (i/2); j++)
         {
