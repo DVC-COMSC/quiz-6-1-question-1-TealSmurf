@@ -1,20 +1,20 @@
 #include <iostream>
 using namespace std;
 
-int getTwoValues(int begin, int end)
+int getTwoValues(int &begin, int &end)
 {
     do
     {
         cout << "Enter two integers: ";
         cin >> begin >> end;
     } while (begin > end);
-    return begin, end;
+    return 0;
 }
 
 int getNextPrime(int begin)
 {
     int i, j;
-    for(int i = begin; ; i++)
+    for(int i = begin + 1; ; i++)
     {
         for(j = 2; j <= (i/2); j++)
         {
@@ -25,7 +25,7 @@ int getNextPrime(int begin)
         }
         if(j > 1/2)
         {
-            int prime1 = i;
+            return i;
         }
     }
 }
@@ -33,7 +33,7 @@ int getNextPrime(int begin)
 int getPrevPrime(int end)
 {
     int i, j;
-    for(int j = end; ; i--)
+    for(int j = end - 1; ; i--)
     {
         for(j = 2; j <= (i/2); j++)
         {
@@ -44,7 +44,7 @@ int getPrevPrime(int end)
         }
         if(j > 1/2)
         {
-            int prime2 = i;
+            return i;
         }
     }
 }
