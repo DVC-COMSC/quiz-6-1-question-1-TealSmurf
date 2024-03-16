@@ -7,7 +7,8 @@ int getTwoValues(int begin, int end)
     {
         cout << "Enter two integers: ";
         cin >> begin >> end;
-    } while (begin < end);
+    } while (begin > end);
+    return begin, end;
 }
 
 int getNextPrime(int begin)
