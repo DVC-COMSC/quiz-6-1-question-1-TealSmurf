@@ -14,7 +14,7 @@ int getTwoValues(int &begin, int &end)
 int getNextPrime(int begin)
 {
     int i, j;
-    for(int i = begin + 1; ; i++)
+    for(i = begin + 1; ; i++)
     {
         for(j = 2; j <= (i/2); j++)
         {
@@ -23,7 +23,7 @@ int getNextPrime(int begin)
                 break;
             }
         }
-        if(j > 1/2)
+        if(j > i/2)
         {
             return i;
         }
@@ -33,7 +33,7 @@ int getNextPrime(int begin)
 int getPrevPrime(int end)
 {
     int i, j;
-    for(int i = end - 1; ; i--)
+    for(i = end - 1; ; i--)
     {
         for(j = 2; j <= (i/2); j++)
         {
@@ -42,7 +42,7 @@ int getPrevPrime(int end)
                 break;
             }
         }
-        if(j > 1/2)
+        if(j > i/2)
         {
             return i;
         }
